@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+<<<<<<< HEAD
 import { DatabaseModule } from './database/database.module';
 import { PersonasModule } from './personas/personas.module';
 import { ConfigModule } from '@nestjs/config';
@@ -18,6 +19,11 @@ import { FireBaseModule } from './fire-base/fire-base.module';
     UsuarioModule,
     FireBaseModule,
   ],
+=======
+
+@Module({
+  imports: [],
+>>>>>>> 85bf4cccfb27583638e3f14a82f0cb3747b115bc
   controllers: [AppController],
   providers: [AppService],
 })
