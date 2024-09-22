@@ -6,17 +6,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FireBaseModule = void 0;
+exports.AuthModule = void 0;
 const common_1 = require("@nestjs/common");
-const fire_base_service_1 = require("./service/fire-base.service");
-const fire_base_controller_1 = require("./controller/fire-base.controller");
-let FireBaseModule = class FireBaseModule {
+const auth_service_1 = require("./auth.service");
+const auth_controller_1 = require("./auth.controller");
+const Firebase_service_1 = require("../firebase/Firebase.service");
+const typeorm_1 = require("@nestjs/typeorm");
+const usuario_entity_1 = require("../usuario/entities/usuario.entity");
+let AuthModule = class AuthModule {
 };
-exports.FireBaseModule = FireBaseModule;
-exports.FireBaseModule = FireBaseModule = __decorate([
+exports.AuthModule = AuthModule;
+exports.AuthModule = AuthModule = __decorate([
     (0, common_1.Module)({
-        providers: [fire_base_service_1.FireBaseService],
-        controllers: [fire_base_controller_1.FireBaseController],
+        imports: [typeorm_1.TypeOrmModule.forFeature([usuario_entity_1.Usuario])],
+        controllers: [auth_controller_1.AuthController],
+        providers: [auth_service_1.AuthService, Firebase_service_1.FirebaseService],
     })
-], FireBaseModule);
-//# sourceMappingURL=fire-base.module.js.map
+], AuthModule);
+//# sourceMappingURL=auth.module.js.map

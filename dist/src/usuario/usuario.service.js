@@ -30,7 +30,7 @@ let UsuarioService = class UsuarioService {
     async findOne(id_usuario) {
         return await this.usuariRepository.findOneBy({ id_usuario });
     }
-    update(id_usuario, updateUsuarioDto) {
+    async update(id_usuario, updateUsuarioDto) {
         return this.usuariRepository.update(id_usuario, updateUsuarioDto);
     }
     async remove(id_usuario) {

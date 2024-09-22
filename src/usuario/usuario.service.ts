@@ -23,8 +23,8 @@ export class UsuarioService {
     return await this.usuariRepository.findOneBy({ id_usuario });
   }
 
-  update(id_usuario: number, updateUsuarioDto: UpdateUsuarioDto) {
-    return this.usuariRepository.update(id_usuario, updateUsuarioDto);
+  async update(id_usuario: number, updateUsuarioDto: UpdateUsuarioDto) {
+    return this.usuariRepository.update( id_usuario , updateUsuarioDto); // Actualiza por id_usuario
   }
 
   async remove(id_usuario: number) {

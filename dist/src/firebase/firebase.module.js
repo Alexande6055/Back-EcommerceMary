@@ -6,12 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FireBaseController = void 0;
+exports.FirebaseModule = void 0;
 const common_1 = require("@nestjs/common");
-let FireBaseController = class FireBaseController {
+const firebase_service_1 = require("./firebase.service");
+let FirebaseModule = class FirebaseModule {
 };
-exports.FireBaseController = FireBaseController;
-exports.FireBaseController = FireBaseController = __decorate([
-    (0, common_1.Controller)('fire-base')
-], FireBaseController);
-//# sourceMappingURL=fire-base.controller.js.map
+exports.FirebaseModule = FirebaseModule;
+exports.FirebaseModule = FirebaseModule = __decorate([
+    (0, common_1.Module)({
+        providers: [firebase_service_1.FirebaseService],
+        exports: [firebase_service_1.FirebaseService]
+    })
+], FirebaseModule);
+//# sourceMappingURL=firebase.module.js.map

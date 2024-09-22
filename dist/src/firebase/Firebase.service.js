@@ -6,12 +6,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FireBaseService = void 0;
+exports.FirebaseService = void 0;
 const common_1 = require("@nestjs/common");
-let FireBaseService = class FireBaseService {
+const admin = require("firebase-admin");
+let FirebaseService = class FirebaseService {
+    onModuleInit() {
+        if (!admin.apps.length) {
+            admin.initializeApp({
+                credential: admin.credential.applicationDefault(),
+            });
+        }
+    }
+    async verifyIdToken(idToken) {
+        return await admin.auth().verifyIdToken(idToken);
+    }
 };
-exports.FireBaseService = FireBaseService;
-exports.FireBaseService = FireBaseService = __decorate([
+exports.FirebaseService = FirebaseService;
+exports.FirebaseService = FirebaseService = __decorate([
     (0, common_1.Injectable)()
-], FireBaseService);
-//# sourceMappingURL=fire-base.service.js.map
+], FirebaseService);
+//# sourceMappingURL=Firebase.service.js.map

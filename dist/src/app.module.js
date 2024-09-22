@@ -14,7 +14,8 @@ const database_module_1 = require("./database/database.module");
 const personas_module_1 = require("./personas/personas.module");
 const config_1 = require("@nestjs/config");
 const usuario_module_1 = require("./usuario/usuario.module");
-const fire_base_module_1 = require("./fire-base/fire-base.module");
+const auth_module_1 = require("./auth/auth.module");
+const firebase_module_1 = require("./firebase/firebase.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -28,7 +29,8 @@ exports.AppModule = AppModule = __decorate([
                 envFilePath: '.env',
             }),
             usuario_module_1.UsuarioModule,
-            fire_base_module_1.FireBaseModule,
+            auth_module_1.AuthModule,
+            firebase_module_1.FirebaseModule,
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
