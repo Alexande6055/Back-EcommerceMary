@@ -9,6 +9,7 @@ export class AuthController {
 
   @Post('verify')
   async verifyToken(@Body('token') token: string) {
+    console.log("Se llamo al metodo de la api");
     const user = await this.authService.validateUser(token);
     return user;
   }

@@ -20,6 +20,7 @@ let AuthController = class AuthController {
         this.authService = authService;
     }
     async verifyToken(token) {
+        console.log("Se llamo al metodo de la api");
         const user = await this.authService.validateUser(token);
         return user;
     }
