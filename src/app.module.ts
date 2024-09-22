@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+//import { AppController } from './app.controller';
+//import { AppService } from './app.service';
 import { DatabaseModule } from './database/database.module';
 import { PersonasModule } from './personas/personas.module';
 import { ConfigModule } from '@nestjs/config';
@@ -18,7 +18,7 @@ import { FireBaseModule } from './fire-base/fire-base.module';
     UsuarioModule,
     FireBaseModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+ // controllers: [AppController],
+ // providers: [AppService],
 })
 export class AppModule {}

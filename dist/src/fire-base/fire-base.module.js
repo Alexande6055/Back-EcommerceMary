@@ -10,11 +10,14 @@ exports.FireBaseModule = void 0;
 const common_1 = require("@nestjs/common");
 const fire_base_service_1 = require("./service/fire-base.service");
 const fire_base_controller_1 = require("./controller/fire-base.controller");
+const typeorm_1 = require("@nestjs/typeorm");
+const usuario_entity_1 = require("../usuario/entities/usuario.entity");
 let FireBaseModule = class FireBaseModule {
 };
 exports.FireBaseModule = FireBaseModule;
 exports.FireBaseModule = FireBaseModule = __decorate([
     (0, common_1.Module)({
+        imports: [typeorm_1.TypeOrmModule.forFeature([usuario_entity_1.Usuario])],
         providers: [fire_base_service_1.FireBaseService],
         controllers: [fire_base_controller_1.FireBaseController],
     })

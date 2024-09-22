@@ -20,6 +20,7 @@ exports.UsuarioModule = UsuarioModule = __decorate([
         imports: [typeorm_1.TypeOrmModule.forFeature([usuario_entity_1.Usuario])],
         controllers: [usuario_controller_1.UsuarioController],
         providers: [usuario_service_1.UsuarioService],
+        exports: [usuario_service_1.UsuarioService],
     })
 ], UsuarioModule);
 //# sourceMappingURL=usuario.module.js.map

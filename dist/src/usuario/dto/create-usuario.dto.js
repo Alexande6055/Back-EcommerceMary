@@ -17,6 +17,10 @@ exports.CreateUsuarioDto = CreateUsuarioDto;
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
+], CreateUsuarioDto.prototype, "uid", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
 ], CreateUsuarioDto.prototype, "email", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
