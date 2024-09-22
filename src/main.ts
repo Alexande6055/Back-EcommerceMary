@@ -16,8 +16,9 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
 
-  // Arrancar la aplicación
-  await app.listen(3000);
+  // Usar el puerto proporcionado por Render o el 3000 como fallback
+  const port = process.env.PORT || 3000;
+  await app.listen(port);
 }
 
 bootstrap();
