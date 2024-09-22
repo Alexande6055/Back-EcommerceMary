@@ -6,7 +6,7 @@ import { PersonasModule } from './personas/personas.module';
 import { ConfigModule } from '@nestjs/config';
 import { UsuarioModule } from './usuario/usuario.module';
 import { AuthModule } from './auth/auth.module';
-import { FirebaseModule } from './firebase/firebase.module';
+import { firebaseModule } from './firebase/firebase.module';
 
 @Module({
   imports: [
@@ -18,7 +18,7 @@ import { FirebaseModule } from './firebase/firebase.module';
     }),
     UsuarioModule,
     AuthModule,
-    FirebaseModule,
+    firebaseModule,
   ],
   controllers: [AppController],
   providers: [AppService],
