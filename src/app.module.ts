@@ -5,7 +5,8 @@ import { DatabaseModule } from './database/database.module';
 import { PersonasModule } from './personas/personas.module';
 import { ConfigModule } from '@nestjs/config';
 import { UsuarioModule } from './usuario/usuario.module';
-import { FireBaseModule } from './fire-base/fire-base.module';
+import { AuthModule } from './auth/auth.module';
+import { FirebaseModule } from './firebase/firebase.module';
 
 @Module({
   imports: [
@@ -16,7 +17,8 @@ import { FireBaseModule } from './fire-base/fire-base.module';
       envFilePath: '.env', // Esta línea es opcional ya que '.env' es el valor predeterminado
     }),
     UsuarioModule,
-    FireBaseModule,
+    AuthModule,
+    FirebaseModule,
   ],
   controllers: [AppController],
   providers: [AppService],
