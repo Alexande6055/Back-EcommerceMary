@@ -18,7 +18,9 @@ export class FireBaseController {
     },
   })
   async verifyToken(@Body('token') token: string) {
+    console.log("se comienza la validacion del usuario")
     const user = await this.firebaseService.validateUser(token);
+    console.log("Se termina la validacion del token del usuario se retorna el user  ")
     return user;
   }
 }

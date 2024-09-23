@@ -5,7 +5,7 @@ import {
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Usuario } from 'src/usuario/entities/usuario.entity';
+import { Usuario } from '../../usuario/entities/usuario.entity';
 @Entity('Personas')
 export class Persona {
   @PrimaryGeneratedColumn()
